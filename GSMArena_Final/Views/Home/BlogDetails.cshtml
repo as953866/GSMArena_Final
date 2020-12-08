@@ -1,0 +1,14 @@
+﻿@model GSMArena_Final.Models.Blog
+
+@{
+    ViewData["Title"] = "BlogDetails";
+    var item = Model;
+}
+
+
+<h1>@item.Title</h1>
+<h3>@item.BlogDate</h3>
+<img src="~/blogphotos/@item.BlogID@item.Extension" />
+<p>
+    @item.BlogText
+</p>

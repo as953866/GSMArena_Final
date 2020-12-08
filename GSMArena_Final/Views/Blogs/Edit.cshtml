@@ -1,0 +1,49 @@
+﻿@model GSMArena_Final.Models.Blog
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Blog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BlogID" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogText" class="control-label"></label>
+                <input asp-for="BlogText" class="form-control" />
+                <span asp-validation-for="BlogText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogDate" class="control-label"></label>
+                <input asp-for="BlogDate" class="form-control" />
+                <span asp-validation-for="BlogDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Extension" class="control-label"></label>
+                <input asp-for="Extension" class="form-control" />
+                <span asp-validation-for="Extension" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

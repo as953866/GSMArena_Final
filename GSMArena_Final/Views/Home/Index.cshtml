@@ -1,0 +1,55 @@
+﻿@model IEnumerable<GSMArena_Final.Models.Mobile>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/slides/slide1.png" alt="Slide 1" style="width:100%;height:600px">
+            <div class="carousel-caption">
+                <h3>Mobile</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/slides/slide2.png" alt="Slide 2" style="width:100%;height:600px">
+            <div class="carousel-caption">
+                <h3>Mobile</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/slides/slide3.png" alt="Slide 3" style="width:100%;height:600px">
+            <div class="carousel-caption">
+                <h3>Mobile</h3>
+            </div>
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Latest Devices</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+    <div class="card">
+        <img class="card-img-top" src="../../mobilephotos/@item.MobileID@item.Extension" alt="Card image">
+        <div class="card-body">
+            <h5 class="card-title">@item.MobileName</h5>
+            <a class="btn btn-warning" asp-action="MobileDetails" asp-route-id="@item.MobileID">View Mobile Details</a>
+        </div>
+    </div>
+    }
+</div>

@@ -1,0 +1,114 @@
+﻿@model GSMArena_Final.Models.Mobile
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Mobile</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MobileName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MobileName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Network)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Network)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Launch)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Launch)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Display)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Display)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Platform)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Platform)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Memory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Memory)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MainCamera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MainCamera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SelfieCamera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SelfieCamera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sound)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sound)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Features)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Features)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Battery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Battery)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Misc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Misc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Extension)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Extension)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Company.CompanyName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MobileID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

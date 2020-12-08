@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GSMArena_Final.Models.Mobile>
+
+@{
+    ViewData["Title"] = "ViewMobilesByCompany";
+}
+
+<div class="text-center">
+    <h1 class="display-4">All Devices</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img class="card-img-top" src="../../mobilephotos/@item.MobileID@item.Extension" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">@item.MobileName</h5>
+                <a class="btn btn-warning" asp-action="MobileDetails" asp-route-id="@item.MobileID">View Mobile Details</a>
+            </div>
+        </div>
+    }
+</div>

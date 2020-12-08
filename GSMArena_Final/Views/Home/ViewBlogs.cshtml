@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GSMArena_Final.Models.Blog>
+
+@{
+    ViewData["Title"] = "ViewBlogs";
+}
+
+<div class="text-center">
+    <h1 class="display-4">All Blogs Entry</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img class="card-img-top" src="../../blogphotos/@item.BlogID@item.Extension" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">@item.Title</h5>
+                <a class="btn btn-warning" asp-action="BlogDetails" asp-route-id="@item.BlogID">View Blog Details</a>
+            </div>
+        </div>
+    }
+</div>

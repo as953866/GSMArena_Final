@@ -1,0 +1,23 @@
+﻿@model IEnumerable<GSMArena_Final.Models.Company>
+
+@{
+    ViewData["Title"] = "AllCompanies";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">All Companies</h1>
+</div>
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card bg-warning">
+            <div class="card-body text-center">
+                <p class="card-text">
+                    <a class="font-weight-bolder" asp-action="ViewMobilesByCompany" asp-route-id="@item.CompanyID">@item.CompanyName</a>
+                </p>
+            </div>
+        </div>
+    }
+</div>
+

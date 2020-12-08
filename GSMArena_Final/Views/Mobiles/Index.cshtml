@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GSMArena_Final.Models.Mobile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Mobile Details</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Mobile Details</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Network)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Launch)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Network)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Launch)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-secondary" asp-route-id="@item.MobileID">Edit</a> |
+                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.MobileID">Details</a> |
+                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.MobileID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
